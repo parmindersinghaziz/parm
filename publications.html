@@ -1,0 +1,193 @@
+<DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Publications | Dr. Parminder Singh 'Aziz'</title>
+
+  <!-- Google Fonts & Font Awesome -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Noto+Sans+Gurmukhi:wght@400;600&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+  <style>
+    * { box-sizing:border-box; margin:0; padding:0; }
+    :root { --ink:#2d2a26; --paper:#faf7f2; --deep:#1f2a36; --gold:#b8860b; --soft-gold:#e6c68f; --card:#fff; --muted:#6b6560; --line:#e2dbd0; }
+    html { scroll-behavior:smooth; }
+    body { font-family:'Source Sans Pro', Georgia, 'Noto Sans Gurmukhi', serif; background:var(--paper); color:var(--ink); line-height:1.7; }
+    .container { width:min(1200px, 94%); margin:0 auto; }
+
+    /* Header & Navigation */
+    .site-header { background:var(--deep); color:#fff; position:sticky; top:0; z-index:100; box-shadow:0 2px 12px rgba(0,0,0,.2); }
+    .header-row { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; padding:12px 0; gap:10px; }
+    .logo a { text-decoration:none; color:#fff; }
+    .logo-name { font-family:'Playfair Display', Georgia, serif; font-size:1.4rem; color:var(--soft-gold); line-height:1.2; }
+    .logo-name span { color:#fff; font-style:italic; }
+    .logo-sub { font-size:.7rem; letter-spacing:1.6px; text-transform:uppercase; color:#b9c7d4; }
+    .site-nav ul { list-style:none; display:flex; flex-wrap:wrap; gap:2px; }
+    .site-nav a { display:block; color:#e8eef4; text-decoration:none; font-size:.9rem; padding:10px 13px; border-radius:4px; transition:background .2s; }
+    .site-nav a:hover { background:rgba(255,255,255,.08); }
+
+    @media (max-width:800px) { .site-nav { width:100%; overflow-x:auto; } .site-nav ul { flex-wrap:nowrap; width:max-content; } }
+
+    /* Page Hero */
+    .page-hero { background:linear-gradient(135deg, #16222a, #2c5364); color:#f8f1e7; text-align:center; padding:60px 0 50px; }
+    .page-hero h1 { font-family:'Playfair Display', Georgia, serif; font-size:2.6rem; }
+    .page-hero h1 em { color:var(--soft-gold); }
+    .page-hero p { max-width:700px; margin:12px auto 0; font-size:1.1rem; color:#cbd7df; }
+
+    /* Main content */
+    main { padding:50px 0 60px; }
+    .section-title { font-family:'Playfair Display', Georgia, serif; font-size:2rem; text-align:center; margin-bottom:8px; color:var(--deep); }
+    .section-subtitle { text-align:center; max-width:750px; margin:0 auto 40px; color:var(--muted); font-style:italic; }
+
+    .section-block { margin-bottom:60px; }
+    .section-block:last-child { margin-bottom:0; }
+
+    /* Solo Books grid */
+    .books-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:30px; margin-top:20px; }
+    .book-card { background:var(--card); border-radius:12px; overflow:hidden; box-shadow:0 4px 18px rgba(0,0,0,.05); border-top:3px solid var(--gold); text-align:center; padding-bottom:20px; transition:transform .2s; }
+    .book-card:hover { transform:translateY(-5px); }
+    .book-cover { width:100%; aspect-ratio:2 / 3; object-fit:cover; display:block; background:#f0e9df; }
+    /* if image missing, show placeholder text */
+    .book-card h3 { font-family:'Playfair Display', Georgia, serif; font-size:1.4rem; color:var(--deep); margin:15px 10px 5px; }
+    .book-card p { padding:0 15px; color:var(--muted); font-size:.95rem; }
+
+    /* List styles for anthologies etc. */
+    .simple-list { list-style:none; display:grid; grid-template-columns:repeat(auto-fit, minmax(230px, 1fr)); gap:14px; margin-top:20px; }
+    .simple-list li { background:#fff; border-left:4px solid var(--gold); padding:14px 18px; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,.03); font-weight:600; color:#3d3833; font-size:1.05rem; }
+    .simple-list li span { display:block; font-weight:400; color:var(--muted); font-size:.85rem; margin-top:2px; }
+
+    .two-col { display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:30px; margin-top:20px; }
+
+    .accent-card { background:#fff; border-radius:12px; padding:24px 26px; border-top:3px solid var(--gold); box-shadow:0 3px 10px rgba(0,0,0,.04); }
+    .accent-card h3 { font-family:'Playfair Display', Georgia, serif; font-size:1.3rem; color:var(--deep); margin-bottom:8px; }
+    .accent-card p, .accent-card li { color:#4b4744; font-size:.98rem; }
+    .accent-card ul { padding-left:20px; list-style-type:square; }
+
+    /* Footer */
+    .site-footer { background:var(--deep); color:#c5cdd5; text-align:center; padding:25px 0; }
+    .site-footer a { color:var(--soft-gold); text-decoration:none; font-weight:600; }
+    .footer-links { margin-bottom:8px; }
+    .copy { font-size:.8rem; opacity:.8; }
+  </style>
+</head>
+<body>
+
+  <!-- ===== Same Header as main site ===== -->
+  <header class="site-header">
+    <div class="container header-row">
+      <div class="logo">
+        <a href="index.html">
+          <div class="logo-name">Parminder Singh <span>'Aziz'</span></div>
+          <div class="logo-sub">Author • Academician • Review Panelist</div>
+        </a>
+      </div>
+      <nav class="site-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#accomplishments">Accomplishments</a></li>
+          <li><a href="index.html#literary">Literary Canvas</a></li>
+          <li><a href="publications.html">Publications</a></li>
+          <li><a href="index.html#reviews">Reviews</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== Page Hero ===== -->
+  <section class="page-hero">
+    <div class="container">
+      <h1>Publications <em>&amp; Literary Works</em></h1>
+      <p>Solo books, collaborative anthologies, academic encyclopaedia entries, and heartfelt translations.</p>
+    </div>
+  </section>
+
+  <!-- ===== Main content ===== -->
+  <main class="container">
+
+    <!-- 1. Solo Books -->
+    <div class="section-block" id="solo-books">
+      <h2 class="section-title">Solo Books</h2>
+      <p class="section-subtitle">Works authored by Dr. Parminder Singh 'Aziz'</p>
+      <div class="books-grid">
+
+        <div class="book-card">
+          <img src="echoesofus.jpg" alt="Echoes of Us cover" class="book-cover" onerror="this.src='data:image/svg+xml;charset=utf8,%3Csvg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;200&quot; height=&quot;300&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=%22%23e6d9c3%22/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; fill=%22%23b8860b%22 font-family=&quot;Georgia&quot; font-size=&quot;14&quot; text-anchor=&quot;middle&quot;%3EEchoes of Us%3C/text%3E%3C/svg%3E'" />
+          <h3><i>Echoes of Us</i></h3>
+          <p>A companion volume to <em>Ibadatnama</em> — selected English renderings of the ghazals and geets.</p>
+        </div>
+
+        <div class="book-card">
+          <img src="ibadatnama.jpg" alt="Ibadatnama cover" class="book-cover" onerror="this.src='data:image/svg+xml;charset=utf8,%3Csvg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;200&quot; height=&quot;300&quot;%3E%3Crect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=%22%23d9c9b3%22/%3E%3Ctext x=&quot;50%25&quot; y=&quot;50%25&quot; fill=%22%23552a0a%22 font-family=&quot;Georgia&quot; font-size=&quot;13&quot; text-anchor=&quot;middle&quot;%3EIbadatnama%3C/text%3E%3C/svg%3E'" />
+          <h3><i>Ibadatnama</i></h3>
+          <p>Fifty‑two ghazals and twelve geets with QR‑linked audio companions.</p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 2. Anthologies & Collaborative Volumes -->
+    <div class="section-block" id="anthologies">
+      <h2 class="section-title">Anthologies &amp; Collaborative Volumes</h2>
+      <p class="section-subtitle">Poems, critical essays, and creative pieces published with peers</p>
+      <ul class="simple-list">
+        <li>Kosse Chanan</li>
+        <li>Kosse Chanan 2</li>
+        <li>Jazbaat Ke Samandar</li>
+        <li>Chandigarh Mein Urdu Ghazal</li>
+        <li>Ghazal Udaas Hai</li>
+        <li>Amravati Poetic Prism 2017</li>
+        <li>Amravati Poetic Prism 2018</li>
+      </ul>
+    </div>
+
+    <!-- 3. Academic Collaborations -->
+    <div class="section-block" id="academic">
+      <h2 class="section-title">Academic Collaborations</h2>
+      <p class="section-subtitle">Encyclopaedia entries and scholarly chapters</p>
+      <div class="two-col">
+        <div class="accent-card">
+          <h3><i class="fas fa-book-open" style="color:var(--gold);"></i> Routledge Encyclopaedia</h3>
+          <p>Author of an entry on modern Punjabi poetry / literary theory (title as contributed).</p>
+        </div>
+        <div class="accent-card">
+          <h3><i class="fas fa-book-open" style="color:var(--gold);"></i> Springer Encyclopaedia</h3>
+          <p>Contribution to an international encyclopaedia covering intersection of Indian literature and digital humanities.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4. Translations -->
+    <div class="section-block" id="translations">
+      <h2 class="section-title">Translations</h2>
+      <p class="section-subtitle">Bringing poetry and sacred works to a wider readership</p>
+      <div class="two-col">
+        <div class="accent-card">
+          <h3><i class="fas fa-language" style="color:var(--gold);"></i> Gaoo Dhoorh Vela</h3>
+          <p><strong>Sudeep Sen’s poetry</strong>, co‑translated into Gurmukhi.</p>
+        </div>
+        <div class="accent-card">
+          <h3><i class="fas fa-language" style="color:var(--gold);"></i> Sikh Dharam – (Editor &amp; Translator)</h3>
+          <p>Translator and editor of <em>Appreciating Sikhism</em> by Dr. Paramjit Sachdeva, making Sikh thought accessible to fresh readers.</p>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-links">
+        <a href="index.html">Home</a> &nbsp;•&nbsp;
+        <a href="publications.html">Publications</a> &nbsp;•&nbsp;
+        <a href="mailto:parmindersinghaziz@gmail.com">Email</a>
+      </div>
+      <p class="copy">© 2025 Dr. Parminder Singh 'Aziz' — All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

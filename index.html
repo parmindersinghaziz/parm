@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Dr. Parminder Singh 'Aziz' | Author • Academician • Review Panelist</title>
+<style>
+  :root { --deep:#1f2a36; --gold:#b8860b; --soft:#e6c68f; --paper:#faf7f2; --ink:#2d2a26; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  html { scroll-behavior:smooth; }
+  body { font-family:'Segoe UI', Georgia, 'Noto Sans Gurmukhi', sans-serif; background:var(--paper); color:var(--ink); line-height:1.7; }
+  .container { width:min(1200px,92%); margin:0 auto; }
+
+  header { background:var(--deep); color:#fff; position:sticky; top:0; z-index:100; padding:12px 0; }
+  .header-row { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px; }
+  .logo a { color:#fff; text-decoration:none; }
+  .logo h1 { font-size:1.5rem; }
+  .logo h1 span { color:var(--soft); }
+  .logo p { font-size:.7rem; letter-spacing:2px; text-transform:uppercase; color:#b9c7d4; }
+  nav ul { list-style:none; display:flex; gap:5px; flex-wrap:wrap; }
+  nav a { color:#e8eef4; text-decoration:none; padding:8px 12px; border-radius:4px; }
+  nav a:hover { background:rgba(255,255,255,.1); }
+  @media (max-width:800px) { nav { width:100%; overflow-x:auto; } nav ul { flex-wrap:nowrap; } }
+
+  .hero { background:linear-gradient(135deg,#16222a 0%,#2c5364 100%); color:#f8f1e7; text-align:center; padding:60px 0 80px; }
+  .hero-avatar {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  overflow: hidden;          /* clips the image into a circle */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  background: #b8860b;       /* optional gold shade behind photo */
+  box-shadow: 0 0 0 6px rgba(255,255,255,0.15);
+}
+
+.hero-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;         /* crops nicely, avoids stretching */
+  display: block;
+}
+  .hero h2 { font-size:2.2rem; }
+  .hero h2 em { color:var(--soft); }
+  .hero-tag { letter-spacing:3px; text-transform:uppercase; font-size:.85rem; color:#cbd7df; margin-top:5px; }
+  .couplet-box { max-width:650px; margin:40px auto 0; background:rgba(0,0,0,.25); border:1px solid rgba(255,255,255,.15); border-radius:15px; padding:30px; }
+  .couplet-label { color:var(--soft); font-size:.8rem; letter-spacing:2px; margin-bottom:12px; }
+  #couplet { font-size:1.4rem; line-height:2.2; transition:opacity .7s; font-family:'Noto Sans Gurmukhi', serif; }
+  .btn { display:inline-block; margin-top:25px; padding:10px 25px; border:1px solid #fff; border-radius:30px; color:#fff; text-decoration:none; margin-right:8px; }
+  .btn:hover { background:var(--gold); border-color:var(--gold); }
+
+  section { padding:60px 0; border-bottom:1px solid #ddd; }
+  h3 { text-align:center; font-size:2rem; margin-bottom:10px; }
+  .sub { text-align:center; color:#666; font-style:italic; margin-bottom:40px; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:20px; }
+  .card { background:#fff; padding:25px; border-radius:12px; border-top:4px solid var(--gold); box-shadow:0 3px 10px rgba(0,0,0,.05); }
+  .card h4 { font-size:1.2rem; color:var(--deep); margin-bottom:8px; }
+  .card p { color:#555; font-size:.95rem; }
+  .card ul { margin-left:18px; color:#555; }
+  .book { background:#f4ede2; border-left:4px solid var(--gold); padding:12px 16px; border-radius:6px; margin:8px 0; }
+  .book strong { font-style:italic; }
+
+  .contact-row { display:flex; flex-wrap:wrap; gap:15px; justify-content:center; margin-top:20px; }
+  .contact-item { background:#fff; padding:14px 20px; border-radius:10px; box-shadow:0 2px 8px rgba(0,0,0,.04); font-size:.95rem; }
+  .contact-item a { color:var(--ink); text-decoration:none; }
+
+  footer { background:var(--deep); color:#c5cdd5; text-align:center; padding:25px 0; }
+  footer a { color:var(--soft); text-decoration:none; }
+  .copy { font-size:.8rem; opacity:.8; margin-top:8px; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container header-row">
+    <div class="logo">
+      <a href="#home">
+        <h1>Parminder Singh <span>'Aziz'</span></h1>
+        <p>Author • Academician • Review Panelist</p>
+      </a>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#accomplishments">Accomplishments</a></li>
+        <li><a href="#literary">Literary Canvas</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" id="home">
+  <div class="container">
+    <div class="hero-avatar">
+	<img src="images/parm.jpg" alt="Dr. Parminder Singh 'Aziz'" />  
+  </div>
+    <h2>Dr. Parminder Singh <em>'Aziz'</em></h2>
+    <div class="hero-tag">• Educator • Scholar • Poet • Translator • Reviewer • Short Story Writer</div>
+    <div class="couplet-box">
+      <div class="couplet-label">✦ Punjabi Couplets ✦</div>
+      <div id="couplet"></div>
+    </div>
+    <a href="#about" class="btn">About the Author</a>
+    <a href="#publications" class="btn">Explore Books</a>
+  </div>
+</section>
+
+<section id="about">
+  <div class="container">
+    <h3>About</h3>
+    <p class="sub">An academic, poet, and translator</p>
+    <div class="grid">
+      <div class="card">
+        <h4>Early Roots</h4>
+        <p>Born on <strong>October 9, 1980</strong> in Fazilka. At six, family moved to Abohar. Matriculated at Divine Light Public School with 81%, national merit list: 100 in Maths, 99 in Sanskrit, 98 in English.</p>
+      </div>
+      <div class="card">
+        <h4>Humanities &amp; IT</h4>
+        <p>Pursued BA in English via Panjab University, while enrolling at NIIT. By 18, was teaching at a computer centre. Later transferred to Chandigarh for advanced IT training and college.</p>
+      </div>
+      <div class="card">
+        <h4>Academic Transition</h4>
+        <p>Mentored by <strong>Prof. D.K. Chatterjee</strong>, shifted after 12 years of IT industry work into academia. Now Assistant Professor of English at Dev Samaj College for Women, Chandigarh.</p>
+      </div>
+      <div class="card">
+        <h4>Research &amp; Innovations</h4>
+        <p>Research spans NEP 2020, digital pedagogy, Punjabiyat. His poetry embeds QR codes that link to audio recitations — a pioneering blend of print and technology.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="accomplishments">
+  <div class="container">
+    <h3>Accomplishments</h3>
+    <p class="sub">A multi-disciplinary journey</p>
+    <div class="grid">
+      <div class="card">
+        <h4>Education &amp; Merit</h4>
+        <ul>
+          <li>National merit list in matriculation</li>
+          <li>3rd position – Panjab University (BA I)</li>
+          <li>2nd position – DAV College, Abohar</li>
+          <li>1st position – GGDSD College, Chandigarh</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h4>Research Work</h4>
+        <ul>
+          <li>NEP 2020 policy studies</li>
+          <li>Digital vocational training frameworks</li>
+          <li>Punjabiyat in cyberspace</li>
+          <li>Academic governance</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h4>IT Professional (12+ Yrs)</h4>
+        <p>Technical and leadership roles across software training, corporate IT, architecture, and pedagogy.</p>
+      </div>
+      <div class="card">
+        <h4>Educator &amp; Pedagogy</h4>
+        <p>Active in literary seminars, youth programs, and innovative integration of classical traditions with digital media.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="literary">
+  <div class="container">
+    <h3>Literary Canvas</h3>
+    <p class="sub">Timeless forms, modern sensibilities</p>
+    <div class="grid">
+      <div class="card">
+        <h4>Poetry (Ghazals &amp; Geets)</h4>
+        <p>Writes primarily in Punjabi and Urdu. Strict adherence to <em>arooz</em> while exploring contemporary socio-philosophical themes.</p>
+      </div>
+      <div class="card">
+        <h4>Short Stories</h4>
+        <p>Prose that probes identity, emotion, and nuance with lyrical resonance.</p>
+      </div>
+      <div class="card">
+        <h4>Translations</h4>
+        <p>Works across English, Punjabi, and Urdu to bridge literary worlds.</p>
+      </div>
+      <div class="card">
+        <h4>Digital Innovation</h4>
+        <p>QR codes in printed books link couplets to audio recitations and companion digital archives.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="publications">
+  <div class="container">
+    <h3>Publications</h3>
+    <p class="sub">Books, anthologies, and articles</p>
+    <div class="grid">
+      <div class="card">
+        <h4>Solo Books</h4>
+        <div class="book"><strong><a href="https://www.amazon.in/Ibadatnama-Complete-Parminder-Singh-Aziz/dp/9363598810/"><font class="book">Ibadatnama</font></a></strong><br>52 ghazals + 12 geets, with integrated digital companion links.</div>
+        <div class="book"><strong><a class="book" href="https://www.amazon.in/Echoes-Us-Friendship-Collection-Separation/dp/9372138991?s=bazaar" class="book">Echoes of Us: Poems of Love and Friendship (BookLeaf 2025)</a></strong></div>
+      </div>
+      <div class="card">
+        <h4>Anthologies &amp; Collaborative Volumes</h4>
+        <p>Contributions to multi-author poetry collections, critical volumes, and thematic anthologies.</p>
+      </div>
+      <div class="card">
+        <h4>Articles &amp; Newspapers</h4>
+        <p>Research papers in academic journals and literary essays across North Indian newspapers.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="container">
+    <h3>Reviews</h3>
+    <p class="sub">Critical examinations by Dr. Parminder Singh 'Aziz'</p>
+    <div class="grid">
+      <div class="card">
+        <h4>The Wise Owl Panel</h4>
+        <p>Active review panelist for <strong><em>The Wise Owl</em></strong> magazine. Notable review: <em>My Childhood</em> by Dr. Shakuntala Kalra.</p>
+      </div>
+      <div class="card">
+        <h4>Other Reviews</h4>
+        <p>Literary journal and academic conference review criticism.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <h3>Connect &amp; Dialogue</h3>
+    <p class="sub">For collaborations, reviews, and exchange</p>
+    <div class="contact-row">
+      <div class="contact-item">📞 <a href="tel:+919888499071">+91 98884 99071</a></div>
+      <div class="contact-item">💬 <a href="https://wa.me/919876547856" target="_blank">+91 98765 47856</a></div>
+      <div class="contact-item">✉️ <a href="mailto:parmindersinghaziz@gmail.com">parmindersinghaziz@gmail.com</a></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <a href="#home">Home</a> |
+    <a href="#about">About</a> |
+    <a href="#accomplishments">Accomplishments</a> |
+    <a href="#literary">Literary Canvas</a> |
+    <a href="#publications">Publications</a> |
+    <a href="#reviews">Reviews</a> |
+    <a href="#contact">Contact</a>
+    <p style="margin-top:8px;">Dev Samaj College for Women, Sector 45, Chandigarh</p>
+    <p><a href="https://parmindersinghaziz.com" target="_blank">parmindersinghaziz.com</a></p>
+    <div class="copy">© 2026 Dr. Parminder Singh 'Aziz'. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+const coupletsList = [
+  {line1:"ਅੱਗ ਸੋਨੇ ਨੂੰ ਤਪਾ ਕੇ ਕਰਦੀ ਹੈ ਜਿਵੇਂ ਕੁੰਦਨ,", line2:"ਤੇਰੇ ਪਿਆਰ ਦਾ ਦੇ ਚਾਨਣ, ਮੈਂ ਸੰਵਰ ਜਾਵਾਂਗਾ।"},
+  {line1:"ਸੱਜਣ ਜੀ! ਮੈਂ ਐਸਾ ਰੁੱਖ ਹਾਂ,", line2:"ਜੋਬਨ ਰੁੱਤੇ ਬੰਜਰ ਕੁੱਖ ਹਾਂ।"},
+  {line1:"ਉਹ ਜਿਹੜੇ ਰੱਤ ਪੀਂਦੇ ਨੇ ਤੁਸੀਂ ਵੀ ਵੇਖਿਆ ਹੋਣੈ,", line2:"ਅਕਸਰ ਉਹਨਾਂ ਦਿਆਂ ਗਲਿਆਂ ਵਿਚ ਹੀ ਹਾਰ ਹੁੰਦੇ ਨੇ।"},
+  {line1:"ਓਹਨੀਂ ਰਾਹੀਂ ਲੱਭਦਾ ਮੈਨੂੰ ਮੇਰਾ ਹੀ ਪਰਛਾਵਾਂ,", line2:"ਜਿਹਨਾਂ ਰਸਤਿਆਂ ਉੱਤੇ ਫਿਰ ਮੈਂ ਜਾਵਾਂ ਜਾਂ ਨਾ ਜਾਵਾਂ।"},
+  {line1:"ਕੀ ਜਾਦੂ ਅਸਾਂ ਤੇ ਹੋਇਆ ਏ, ਜਦ ਦਾ ਤੂੰ ਦਿਲ ਛੋਹਿਆ ਏ,", line2:"ਇੱਕ ਸਾਦਾ ਜਿਹੇ ਤੇਰੇ ਮੁਖੜੇ ਤੋਂ ਨਜ਼ਰਾਂ ਹਟਾਇਆ ਜਾਂਦਾ ਨਹੀਂ।"},
+  {line1:"ਕਰ ਦੇਵੀਂ ਰੱਬਾ ਮੇਰੀ ਐਨੀ ਅਰਦਾਸ ਪੂਰੀ,", line2:"ਹਰ ਇਕ ਵਿਚ ਵੀਰ, ਧੀ, ਭੈਣ, ਮਾਂ ਲੱਭਾਂ।"},
+  {line1:"ਉਹ ਸਮਝੇ ਜੇ, ਆਪੇ ਸਮਝੇ, ਮੈਂ ਉਸ ਨੂੰ ਸਮਝਾਵਾਂ ਕਿਉਂ...", line2:"ਮੈਂ ਇਨਸਾਨ ਹਾਂ ਉਸ ਦੇ ਵਾਂਗੂੰ, ਸਮਝੇ ਉਹ ਪਰਛਾਵਾਂ ਕਿਉਂ।"}
+];
+let idx = 0;
+const el = document.getElementById('couplet');
+function show() {
+  el.style.opacity = '0';
+  setTimeout(() => {
+    const c = coupletsList[idx];
+    el.innerHTML = `<p>${c.line1}</p><p>${c.line2}</p>`;
+    el.style.opacity = '1';
+    idx = (idx + 1) % coupletsList.length;
+  }, 700);
+}
+show();
+setInterval(show, 5000);
+</script>
+</body>
+</html>

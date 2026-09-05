@@ -7,7 +7,7 @@
 <style>
   :root { --deep:#1f2a36; --gold:#b8860b; --soft:#e6c68f; --paper:#faf7f2; --ink:#2d2a26; }
   * { box-sizing:border-box; margin:0; padding:0; }
-  html { scroll-behavior:smooth; }
+  html { scroll-behavior:smooth; scroll-padding-top:90px; }
   body { font-family:'Segoe UI', Georgia, 'Noto Sans Gurmukhi', sans-serif; background:var(--paper); color:var(--ink); line-height:1.7; }
   .container { width:min(1200px,92%); margin:0 auto; }
 
@@ -20,7 +20,45 @@
   nav ul { list-style:none; display:flex; gap:5px; flex-wrap:wrap; }
   nav a { color:#e8eef4; text-decoration:none; padding:8px 12px; border-radius:4px; }
   nav a:hover { background:rgba(255,255,255,.1); }
-  @media (max-width:800px) { nav { width:100%; overflow-x:auto; } nav ul { flex-wrap:nowrap; } }
+  .menu-btn { /* hidden on desktop; becomes the tap-to-open button on small screens */
+    display:none;
+    background:rgba(255,255,255,.1);
+    color:#fff;
+    border:1px solid rgba(255,255,255,.4);
+    border-radius:6px;
+    padding:9px 15px;
+    font-size:1rem;
+    line-height:1;
+    cursor:pointer;
+    font-family:inherit;
+  }
+  @media (max-width:800px) {
+    nav { width:auto; }
+    .menu-btn { display:inline-flex; align-items:center; gap:8px; }
+    nav ul {
+      display:none;
+      position:absolute;
+      top:100%; left:0; right:0;
+      width:100%;
+      flex-direction:column;
+      flex-wrap:nowrap;
+      gap:0;
+      margin:0;
+      background:var(--deep);
+      padding:6px 0 16px;
+      box-shadow:0 14px 24px rgba(0,0,0,.35);
+    }
+    nav ul.open { display:flex; }
+    nav li { width:100%; }
+    nav a {
+      display:block;
+      padding:13px 6%;
+      font-size:1.02rem;
+      border-radius:0;
+      border-top:1px solid rgba(255,255,255,.1);
+    }
+    .logo h1 { font-size:1.3rem; }
+  }
 
   .hero { background:linear-gradient(135deg,#16222a 0%,#2c5364 100%); color:#f8f1e7; text-align:center; padding:60px 0 80px; }
   .hero-avatar {
@@ -71,21 +109,6 @@
   .copy { font-size:.8rem; opacity:.8; margin-top:8px; }
 </style>
 </head>
-<script>
-var menuBtn = document.getElementById('menuBtn');
-var menuList = document.getElementById('menuList');
-function setMenu(open) {
-  menuList.classList.toggle('open', open);
-  menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
-  menuBtn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
-}
-menuBtn.addEventListener('click', function () {
-  setMenu(!menuList.classList.contains('open'));
-});
-menuList.addEventListener('click', function (e) {
-  if (e.target.tagName === 'A') setMenu(false);
-});
-</script>
 <body>
 
 <header>
@@ -97,7 +120,8 @@ menuList.addEventListener('click', function (e) {
       </a>
     </div>
     <nav>
-      <ul>
+      <button type="button" class="menu-btn" id="menuBtn" aria-expanded="false" aria-label="Open menu">☰ Menu</button>
+      <ul id="menuList">
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#accomplishments">Accomplishments</a></li>
@@ -257,7 +281,7 @@ menuList.addEventListener('click', function (e) {
     <div class="contact-row">
       <div class="contact-item">📞 <a href="tel:+919888499071">+91 98884 99071</a></div>
       <div class="contact-item">💬 <a href="https://wa.me/919876547856" target="_blank">+91 98765 47856</a></div>
-      <div class="contact-item">✉️ <a href="mailto:parmindersinghaziz@gmail.com">parmindersinghaziz@gmail.com</a></div>
+      <div class="contact-item">✉️ <a href="/cdn-cgi/l/email-protection#b2c2d3c0dfdbdcd6d7c0c1dbdcd5dad3c8dbc8f2d5dfd3dbde9cd1dddf"><span class="__cf_email__" data-cfemail="fd8d9c8f90949399988f8e94939a959c879487bd9a909c9491d39e9290">[email&#160;protected]</span></a></div>
     </div>
   </div>
 </section>
@@ -277,7 +301,7 @@ menuList.addEventListener('click', function (e) {
   </div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 const coupletsList = [
   {line1:"ਅੱਗ ਸੋਨੇ ਨੂੰ ਤਪਾ ਕੇ ਕਰਦੀ ਹੈ ਜਿਵੇਂ ਕੁੰਦਨ,", line2:"ਤੇਰੇ ਪਿਆਰ ਦਾ ਦੇ ਚਾਨਣ, ਮੈਂ ਸੰਵਰ ਜਾਵਾਂਗਾ।"},
   {line1:"ਸੱਜਣ ਜੀ! ਮੈਂ ਐਸਾ ਰੁੱਖ ਹਾਂ,", line2:"ਜੋਬਨ ਰੁੱਤੇ ਬੰਜਰ ਕੁੱਖ ਹਾਂ।"},
@@ -301,5 +325,23 @@ function show() {
 show();
 setInterval(show, 5000);
 </script>
+<script>
+// Mobile menu toggle (☰ button)
+var menuBtn = document.getElementById('menuBtn');
+var menuList = document.getElementById('menuList');
+function setMenu(open) {
+  menuList.classList.toggle('open', open);
+  menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  menuBtn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+}
+menuBtn.addEventListener('click', function () {
+  setMenu(!menuList.classList.contains('open'));
+});
+// Close the menu after tapping a link inside it
+menuList.addEventListener('click', function (e) {
+  if (e.target.tagName === 'A') setMenu(false);
+});
+</script>
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495" integrity="sha512-iIg7k2xntmwu6/uSb5tpc/hySgZc4eoL31yB29W6tJFo2akwjPWcEqnCEdJvGexCL0KEQwVYv5BlowfhVz26hg==" data-cf-beacon='{"version":"2024.11.0","token":"965b501fe18b49f686348556a2ea4116","spa":2}' crossorigin="anonymous"></script>
 </body>
 </html>

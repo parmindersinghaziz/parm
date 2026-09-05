@@ -71,6 +71,21 @@
   .copy { font-size:.8rem; opacity:.8; margin-top:8px; }
 </style>
 </head>
+<script>
+var menuBtn = document.getElementById('menuBtn');
+var menuList = document.getElementById('menuList');
+function setMenu(open) {
+  menuList.classList.toggle('open', open);
+  menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  menuBtn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+}
+menuBtn.addEventListener('click', function () {
+  setMenu(!menuList.classList.contains('open'));
+});
+menuList.addEventListener('click', function (e) {
+  if (e.target.tagName === 'A') setMenu(false);
+});
+</script>
 <body>
 
 <header>
